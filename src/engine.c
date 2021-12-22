@@ -1845,7 +1845,7 @@ ibus_hangul_engine_get_input_mode_symbol (IBusHangulEngine *hangul,
     if (symbols[0] == NULL) {
         symbols[INPUT_MODE_HANGUL] = ibus_text_new_from_string ("한");
         g_object_ref_sink(symbols[INPUT_MODE_HANGUL]);
-        symbols[INPUT_MODE_LATIN] = ibus_text_new_from_string ("EN");
+        symbols[INPUT_MODE_LATIN] = ibus_text_new_from_string ("영");
         g_object_ref_sink(symbols[INPUT_MODE_LATIN]);
     }
 
