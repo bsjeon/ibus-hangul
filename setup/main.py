@@ -180,6 +180,10 @@ class Setup ():
 
         word_commit = self.__word_commit.get_active()
         self.__write("word-commit", GLib.Variant.new_boolean(word_commit))
+        if GLib.Variant.new_boolean(word_commit):
+            self.__write("preedit-mode", GLib.Variant.new_string("word"))
+        else:
+            self.__write("preedit-mode", GLib.Variant.new_string("syllable"))
 
         auto_reorder = self.__auto_reorder.get_active()
         self.__write("auto-reorder", GLib.Variant.new_boolean(auto_reorder))
