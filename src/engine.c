@@ -1578,8 +1578,8 @@ ibus_hangul_engine_process_key_event (IBusEngine     *engine,
      * See: https://github.com/choehwanjin/ibus-hangul/issues/40
      */
     if (use_event_forwarding
-#if IBUS_CHECK_VERSION(1, 5, 27)
-        && !(hangul->caps & IBUS_CAP_SYNC_PROCESS_KEY)
+#if IBUS_CHECK_VERSION(1, 5, 28)
+        && (hangul->caps & IBUS_CAP_SYNC_PROCESS_KEY_V2)
 #endif
         ) {
         if (!retval) {
