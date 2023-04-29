@@ -1575,7 +1575,7 @@ ibus_hangul_engine_process_key_event (IBusEngine     *engine,
      *                                      receive the result of update_preedit_text
      *                                      receive the forwarded key event
      *
-     * See: https://github.com/choehwanjin/ibus-hangul/issues/40
+     * See: https://github.com/choehwanjin/ibus-hangul/issues/42
      */
     if (use_event_forwarding
 #if IBUS_CHECK_VERSION(1, 5, 28)
