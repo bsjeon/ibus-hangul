@@ -2,22 +2,25 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="64px"
    height="64px"
    id="svg2383"
    sodipodi:version="0.32"
-   inkscape:version="0.48.1 r9760"
-   sodipodi:docname="ibus-hangul.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="ibus-hangul.inkscape.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   version="1.1">
+   version="1.1"
+   inkscape:export-filename="ibus-hangul.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2385">
     <linearGradient
@@ -53,132 +56,18 @@
          offset="1"
          id="stop4013" />
     </linearGradient>
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 32 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="64 : 32 : 1"
-       inkscape:persp3d-origin="32 : 21.333333 : 1"
-       id="perspective2391" />
     <filter
        inkscape:collect="always"
-       id="filter4051">
+       id="filter4051"
+       x="-0.011174748"
+       y="-0.012886196"
+       width="1.0223495"
+       height="1.0257724">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="0.3160696"
          id="feGaussianBlur4053" />
     </filter>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4031"
-       id="linearGradient4443"
-       x1="24.851917"
-       y1="23.06181"
-       x2="53"
-       y2="44.81181"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4009"
-       id="linearGradient4451"
-       x1="26.537056"
-       y1="39.954941"
-       x2="39.4851"
-       y2="6.7274704"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4023"
-       id="linearGradient4459"
-       x1="44"
-       y1="31.698217"
-       x2="7.1683273"
-       y2="38.448219"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4009"
-       id="linearGradient5155"
-       gradientUnits="userSpaceOnUse"
-       x1="26.537056"
-       y1="39.954941"
-       x2="39.4851"
-       y2="6.7274704" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4023"
-       id="linearGradient5158"
-       gradientUnits="userSpaceOnUse"
-       x1="44"
-       y1="31.698217"
-       x2="7.1683273"
-       y2="38.448219" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4031"
-       id="linearGradient5161"
-       gradientUnits="userSpaceOnUse"
-       x1="24.851917"
-       y1="23.06181"
-       x2="53"
-       y2="44.81181" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4031"
-       id="linearGradient5182"
-       x1="22.268211"
-       y1="21.470707"
-       x2="56.209934"
-       y2="32.470707"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4009"
-       id="linearGradient5190"
-       x1="27.344604"
-       y1="41.853642"
-       x2="20.226585"
-       y2="5.5984201"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4023"
-       id="linearGradient5198"
-       x1="40.844116"
-       y1="26.026407"
-       x2="28.312803"
-       y2="55.716969"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4031"
-       id="linearGradient4482"
-       x1="-8.8764257"
-       y1="-83.973495"
-       x2="25.90625"
-       y2="-79.973495"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(31.25,109.5)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4009"
-       id="linearGradient4490"
-       x1="-6.7380753"
-       y1="-65.728729"
-       x2="-9.4620743"
-       y2="-104.31674"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(31.25,109.5)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4023"
-       id="linearGradient4498"
-       x1="9.9628201"
-       y1="-81.170265"
-       x2="-11.264362"
-       y2="-54.920265"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(31.25,109.5)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4023"
@@ -218,19 +107,22 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6568542"
-     inkscape:cx="26.119862"
-     inkscape:cy="32.265549"
+     inkscape:cx="27.135223"
+     inkscape:cy="33.234019"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:document-units="px"
      inkscape:grid-bbox="true"
-     inkscape:window-width="961"
-     inkscape:window-height="736"
+     inkscape:window-width="1702"
+     inkscape:window-height="1193"
      inkscape:window-x="0"
-     inkscape:window-y="30"
+     inkscape:window-y="37"
      showguides="false"
      inkscape:snap-global="true"
-     inkscape:window-maximized="0">
+     inkscape:window-maximized="0"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid3182" />
