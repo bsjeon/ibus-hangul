@@ -206,6 +206,8 @@ window_inserted_text_cb (GtkEntryBuffer *buffer,
     const gchar *test;
     GtkEntry *entry = GTK_ENTRY (data);
 
+    (void)code;
+
 #if !GTK_CHECK_VERSION (3, 22, 16)
     if (n_loop % 2 == 1) {
         n_loop = 0;
@@ -217,7 +219,6 @@ window_inserted_text_cb (GtkEntryBuffer *buffer,
         /* Run test case */
         const gchar *p = chars;
         const gchar *output = m_test_cases[index].output;
-        guint j = 0;
         gboolean valid_output = TRUE;
 
         if (0 != g_strcmp0 (p, output))
