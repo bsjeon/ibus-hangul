@@ -67,6 +67,6 @@ clean-rpm:
 clean-local: clean-rpm
 
 dist-hook:
-	if test -d .git ; then \
-		git log --name-status --date=iso > $(distdir)/ChangeLog ; \
+	if test -d $(top_srcdir)/.git ; then \
+		git -C $(top_srcdir) log --name-status --date=iso > $(distdir)/ChangeLog ; \
 	fi
