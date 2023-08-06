@@ -192,6 +192,9 @@ static void ibus_hangul_engine_switch_input_mode
 static void ibus_hangul_engine_set_input_mode
                                             (IBusHangulEngine       *hangul,
                                              int                     input_mode);
+static void ibus_hangul_engine_set_hanja_mode
+                                            (IBusHangulEngine       *hangul,
+                                             int                     hanja_mode);
 static IBusText*
             ibus_hangul_engine_get_input_mode_symbol
                                             (IBusHangulEngine       *hangul,
@@ -1629,24 +1632,9 @@ ibus_hangul_engine_focus_in (IBusEngine *engine)
 
     ibus_hangul_engine_update_preedit_mode (hangul);
 
-    if (hangul->input_mode == INPUT_MODE_HANGUL) {
-        ibus_property_set_state (hangul->prop_hangul_mode, PROP_STATE_CHECKED);
-    } else {
-        ibus_property_set_state (hangul->prop_hangul_mode, PROP_STATE_UNCHECKED);
-    }
-
-    if (hangul->hanja_mode) {
-        ibus_property_set_state (hangul->prop_hanja_mode, PROP_STATE_CHECKED);
-    } else {
-        ibus_property_set_state (hangul->prop_hanja_mode, PROP_STATE_UNCHECKED);
-    }
-
     ibus_engine_register_properties (engine, hangul->prop_list);
-
-    ibus_engine_update_property (engine, hangul->prop_hangul_mode);
-    ibus_engine_update_property (engine, hangul->prop_hanja_mode);
-
-    ibus_hangul_engine_update_preedit_text (hangul);
+    ibus_hangul_engine_set_input_mode (hangul, hangul->input_mode);
+    ibus_hangul_engine_set_hanja_mode (hangul, hangul->hanja_mode);
 
     if (hangul->hanja_list != NULL) {
         ibus_hangul_engine_update_lookup_table_ui (hangul);
@@ -1792,16 +1780,7 @@ ibus_hangul_engine_property_activate (IBusEngine    *engine,
         IBusHangulEngine *hangul = (IBusHangulEngine *) engine;
 
         hangul->hanja_mode = !hangul->hanja_mode;
-        if (hangul->hanja_mode) {
-            ibus_property_set_state (hangul->prop_hanja_mode,
-                    PROP_STATE_CHECKED);
-        } else {
-            ibus_property_set_state (hangul->prop_hanja_mode,
-                    PROP_STATE_UNCHECKED);
-        }
-
-        ibus_engine_update_property (engine, hangul->prop_hanja_mode);
-        ibus_hangul_engine_flush (hangul);
+        ibus_hangul_engine_set_hanja_mode (hangul, hangul->hanja_mode);
     }
 }
 
@@ -1884,6 +1863,24 @@ ibus_hangul_engine_set_input_mode (IBusHangulEngine *hangul, int input_mode)
     } else {
         ibus_property_set_state (prop, PROP_STATE_UNCHECKED);
     }
+
+    ibus_engine_update_property (IBUS_ENGINE (hangul), prop);
+}
+
+static void
+ibus_hangul_engine_set_hanja_mode (IBusHangulEngine *hangul, int hanja_mode)
+{
+    IBusProperty* prop = hangul->prop_hanja_mode;
+
+    ibus_hangul_engine_flush (hangul);
+
+    hangul->hanja_mode = hanja_mode;
+    g_debug("hanja_mode:%u: %s", hangul->id, hanja_mode ? "on" : "off");
+
+    if (hangul->hanja_mode)
+        ibus_property_set_state (prop, PROP_STATE_CHECKED);
+    else
+        ibus_property_set_state (prop, PROP_STATE_UNCHECKED);
 
     ibus_engine_update_property (IBUS_ENGINE (hangul), prop);
 }
