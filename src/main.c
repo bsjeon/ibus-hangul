@@ -47,8 +47,7 @@ static const GOptionEntry entries[] =
 
 
 static void
-ibus_disconnected_cb (IBusBus  *bus,
-                      gpointer  user_data)
+ibus_disconnected_cb (IBusBus *bus, gpointer user_data)
 {
     g_debug ("bus disconnected");
     ibus_quit ();
@@ -67,13 +66,15 @@ start_component (void)
     bus = ibus_bus_new ();
 
     res = ibus_bus_is_connected (bus);
-    if (!res) {
+    if (!res)
+    {
         g_warning ("Unable to connect to IBus");
         exit (2);
     }
 
     config = ibus_bus_get_config (bus);
-    if (config == NULL) {
+    if (config == NULL)
+    {
         g_warning ("Unable to connect to IBus config component");
         exit (3);
     }
@@ -104,12 +105,10 @@ start_component (void)
 
     ibus_factory_add_engine (factory, "hangul", IBUS_TYPE_HANGUL_ENGINE);
 
-    if (ibus) {
+    if (ibus)
         ibus_bus_request_name (bus, "org.freedesktop.IBus.Hangul", 0);
-    }
-    else {
+    else
         ibus_bus_register_component (bus, component);
-    }
 
     g_object_unref (component);
 
@@ -134,16 +133,17 @@ main (gint argc, gchar **argv)
 
     g_option_context_add_main_entries (context, entries, GETTEXT_PACKAGE);
 
-    if (!g_option_context_parse (context, &argc, &argv, &error)) {
+    if (!g_option_context_parse (context, &argc, &argv, &error))
+    {
         g_print ("Option parsing failed: %s\n", error->message);
         exit (-1);
     }
 
-    if (verbose) {
+    if (verbose)
+    {
         const gchar* value = g_getenv ("G_MESSAGES_DEBUG");
-        if (value == NULL) {
+        if (value == NULL)
             g_setenv ("G_MESSAGES_DEBUG", "all", TRUE);
-        }
     }
 
     start_component ();
