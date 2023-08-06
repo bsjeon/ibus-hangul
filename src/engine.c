@@ -1643,6 +1643,9 @@ ibus_hangul_engine_focus_in (IBusEngine *engine)
 
     ibus_engine_register_properties (engine, hangul->prop_list);
 
+    ibus_engine_update_property (engine, hangul->prop_hangul_mode);
+    ibus_engine_update_property (engine, hangul->prop_hanja_mode);
+
     ibus_hangul_engine_update_preedit_text (hangul);
 
     if (hangul->hanja_list != NULL) {
